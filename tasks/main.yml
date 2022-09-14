@@ -50,7 +50,7 @@
       get_url:
         url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
         dest: /tmp/gitlab.deb.sh
-        mode: 0755
+        mode: '755'
       notify: execute omnibus
 
     - name: Install GitLab Community Edition
@@ -86,7 +86,7 @@
         name: '{{ gitlab_data_directory }}{{ item }}'
         owner: git
         group: root
-        mode: 0700
+        mode: '700'
         state: directory
       loop:
         - ''
